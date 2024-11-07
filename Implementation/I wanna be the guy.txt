@@ -1,0 +1,5 @@
+n = int(input())
+x_levels = list(map(int, input().split()))[1:]
+y_levels = list(map(int, input().split()))[1:]
+combined_levels = set(x_levels) | set(y_levels)
+print("I become the guy." if len(combined_levels) == n else "Oh, my keyboard!")
