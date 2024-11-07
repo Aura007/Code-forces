@@ -1,0 +1,12 @@
+t = int(input())
+for _ in range(t):
+    print(eval(input()))
+
+
+without eval: 
+
+t = int(input())
+for _ in range(t):
+    expr = input()
+    a, b = map(int, expr.split('+'))
+    print(a + b)
