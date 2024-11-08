@@ -1,0 +1,22 @@
+def formt(n, skills):
+    pro = []
+    mat = []
+    spor = []
+
+    for i in range(n):
+        if skills[i] == 1:
+            pro.append(i + 1)
+        elif skills[i] == 2:
+            mat.append(i + 1)
+        elif skills[i] == 3:
+            spor.append(i + 1)
+
+    max_teams = min(len(pro), len(mat), len(spor))
+    
+    print(max_teams)
+    for i in range(max_teams):
+        print(pro[i], mat[i], spor[i])
+
+n = int(input())
+skills = list(map(int, input().split()))
+formt(n, skills)
