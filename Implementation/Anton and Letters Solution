@@ -1,0 +1,12 @@
+Source Code :  
+
+n = input().strip()  #Reads the input string and removes any leading or trailing whitespace.
+if n == "{}":        #Checks if the input is an empty set. If true, it prints 0 and exits.
+    print(0)
+else:
+    letters = n[1:-1].split(", ") #If not empty, it slices off the opening and closing brackets and splits the string into a list of letters using ", " as the delimiter.
+    dis = set(letters) #Converts the list of letters into a set, which automatically removes any duplicate letters.
+    print(len(dis))  #Prints the number of distinct letters by calculating the length of the set.
+
+
+Another solutions: 
