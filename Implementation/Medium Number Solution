@@ -1,0 +1,7 @@
+def find_medium(a, b, c):  # Define a function to find the medium number
+    return sorted([a, b, c])[1]  # Sort the list of numbers and return the second element
+
+t = int(input())  # Read the number of test cases
+for _ in range(t):  # Loop through each test case
+    a, b, c = map(int, input().split())  # Read three distinct integers and convert them to integers
+    print(find_medium(a, b, c))  # Call the function and print the medium number
