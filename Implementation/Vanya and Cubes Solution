@@ -1,0 +1,12 @@
+n = int(input())
+height = 0
+cubes_used = 0
+
+while True:
+    height += 1
+    cubes_needed = height * (height + 1) // 2
+    if cubes_needed > n:
+        break
+    n -= cubes_needed
+
+print(height - 1)
