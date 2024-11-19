@@ -1,0 +1,21 @@
+# Read the input values for n (initial pairs of socks) and m (frequency of new socks)
+n, m = map(int, input().split())
+
+# Initialize a counter for the number of days Vasya can wear socks
+days = 0
+
+# Continue the loop as long as there are socks available
+while n > 0:
+    # Increment the day counter
+    days += 1
+    
+    # Vasya wears one pair of socks for the day
+    n -= 1
+    
+    # Check if the current day is a multiple of m
+    if days % m == 0:
+        # If it is, Vasya's mom buys him a new pair of socks for the next day
+        n += 1
+
+# Output the total number of days Vasya was able to wear socks
+print(days)
