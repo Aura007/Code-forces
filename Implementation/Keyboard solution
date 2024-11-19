@@ -1,0 +1,6 @@
+keyboard = "qwertyuiopasdfghjkl;zxcvbnm,./"
+direction = input()
+typed = input()
+shift = -1 if direction == 'R' else 1
+original_message = ''.join(keyboard[keyboard.index(char) + shift] for char in typed)
+print(original_message)
