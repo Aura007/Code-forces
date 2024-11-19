@@ -1,0 +1,20 @@
+# Read the number of test cases
+t = int(input())
+
+# Iterate over each test case
+for _ in range(t):
+    # Read the apartment number n and the number of apartments per floor x
+    n, x = map(int, input().split())
+    
+    # Check if the apartment number is on the first floor
+    if n <= 2:
+        print(1)  # Apartments 1 and 2 are on the first floor
+    else:
+        # Calculate which floor Petya lives on for apartments greater than 2
+        # Subtract 3 from n to account for the first two apartments (1 and 2)
+        # Then perform integer division by x to find how many complete floors fit
+        # Add 2 because we need to count from the second floor onward
+        floor = (n - 3) // x + 2
+        
+        # Print the calculated floor number
+        print(floor)
