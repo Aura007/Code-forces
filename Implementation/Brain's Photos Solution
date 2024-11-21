@@ -1,0 +1,16 @@
+n, m = map(int, input().split())
+color_found = False
+ 
+for _ in range(n):
+    row = input().strip()
+    for char in row:
+        if char == 'B' or char == 'W':
+            color_found = True
+            break
+    if color_found:
+        break
+ 
+if color_found:
+    print('#Black&White')
+else:
+    print('#Color')
