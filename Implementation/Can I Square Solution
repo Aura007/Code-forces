@@ -1,0 +1,12 @@
+t = int(input())
+ 
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+    total = sum(a)
+    sqrt_total = int(total ** 0.5)
+    
+    if sqrt_total * sqrt_total == total:
+        print("YES")
+    else:
+        print("NO")
