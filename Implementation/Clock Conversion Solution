@@ -1,0 +1,18 @@
+def convert_time(t, times):
+    results = []
+    for time in times:
+        hh, mm = map(int, time.split(':'))
+        if hh == 0:
+            results.append(f"12:{mm:02d} AM")
+        elif hh == 12:
+            results.append(f"12:{mm:02d} PM")
+        else:
+            period = "AM" if hh < 12 else "PM"
+            hour_12 = hh % 12
+            results.append(f"{hour_12:02d}:{mm:02d} {period}")
+    return results
+ 
+t = int(input())
+times = [input().strip() for _ in range(t)]
+for result in convert_time(t, times):
+    print(result)
