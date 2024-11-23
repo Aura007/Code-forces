@@ -1,0 +1,10 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = input()
+    res = []
+    for char in s:
+        n = ord(char) - ord('a')
+        res.append(n)
+    res1 = max(res) 
+    print(res1 + 1)  
