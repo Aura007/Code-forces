@@ -1,0 +1,17 @@
+t=int(input())
+ 
+for _ in range(t):
+    a,b=map(int,input().split())
+    d=b-a
+    if a==b:
+        print(0)
+    elif d>0:
+        if d%2==0:
+            print(2)
+        else:
+            print(1)
+    elif d< 0:
+        if d%2==0:
+            print(1)
+        else:
+            print(2)
