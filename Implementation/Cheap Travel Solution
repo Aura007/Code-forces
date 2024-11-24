@@ -1,0 +1,24 @@
+def minimum_cost(n, m, a, b):
+    # Cost if Ann buys only single ride tickets
+    cost_single = n * a
+    
+    # Number of full m-ride tickets Ann can buy
+    full_tickets = n // m
+    # Remaining rides after using full m-ride tickets
+    remaining_rides = n % m
+    
+    # Cost using full m-ride tickets and remaining single tickets
+    cost_m_total = (full_tickets * b) + (remaining_rides * a)
+    
+    # Cost if Ann buys one extra m-ride ticket
+    cost_extra_m = (full_tickets + 1) * b
+    
+    # Determine the minimum cost
+    min_cost = min(cost_single, cost_m_total, cost_extra_m)
+    
+    return min_cost
+
+# Example usage:
+n, m, a, b = map(int, input().split())
+result = minimum_cost(n, m, a, b)
+print(result)
