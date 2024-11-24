@@ -1,0 +1,17 @@
+n, m = map(int, input().split())
+word_map = {}
+
+for _ in range(m):
+    a, b = input().split()
+    word_map[a] = b
+
+lecture_words = input().split()
+result = []
+
+for word in lecture_words:
+    if len(word) <= len(word_map[word]):
+        result.append(word)
+    else:
+        result.append(word_map[word])
+
+print(' '.join(result))
