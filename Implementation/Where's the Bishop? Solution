@@ -1,0 +1,23 @@
+t = int(input())  # Number of test cases
+results = []
+ 
+for _ in range(t):
+    input()  # Read and discard the blank line
+    board = [input().strip() for _ in range(8)]
+    found = False
+ 
+    for r in range(1, 7):  # Rows 1 to 6 (1-based index in problem)
+        for c in range(1, 7):  # Columns 1 to 6 (1-based index in problem)
+            # Check if this cell is the center of a `#` in both diagonals
+            if (board[r][c] == '#' and 
+                board[r - 1][c - 1] == '#' and
+                board[r - 1][c + 1] == '#' and
+                board[r + 1][c - 1] == '#' and
+                board[r + 1][c + 1] == '#'):
+                results.append(f"{r + 1} {c + 1}")  # Convert to 1-based index
+                found = True
+                break
+        if found:
+            break
+ 
+print("\n".join(results))
