@@ -1,0 +1,10 @@
+a,b=map(int,input().split())
+burn=0
+total=0
+ 
+while a>0:
+    total+=a
+    burn+=a
+    a=burn//b
+    burn%=b
+print(total)
