@@ -1,0 +1,18 @@
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+ 
+uni = []
+seen = set()
+ 
+for i in range(n):
+    if a[i] not in seen: 
+        uni.append(i + 1)
+        seen.add(a[i])
+    if len(uni) == k:
+        break
+ 
+if len(uni) < k:
+    print("NO")
+else:
+    print("YES")
+    print(' '.join(map(str, uni)))
