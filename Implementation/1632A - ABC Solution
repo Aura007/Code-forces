@@ -1,0 +1,8 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    x = input()
+    if n >= 3 or (n == 2 and x[0] == x[1]):
+        print("NO")
+    else:
+        print("YES")
