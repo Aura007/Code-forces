@@ -1,0 +1,14 @@
+n, b, d = map(int, input().split())
+a = list(map(int, input().split()))
+
+cur = 0
+emp = 0
+
+for i in range(n):
+    if a[i] <= b:
+        cur += a[i]
+        if cur > d:
+            emp += 1
+            cur = 0
+            
+print(emp)
